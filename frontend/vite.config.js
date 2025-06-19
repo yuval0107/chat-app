@@ -8,7 +8,9 @@ export default defineConfig({
 		port: 3000,
 		proxy: {
 			"/api": {
-				target: "http://localhost:5001",
+				target: "https://chat-app-g6ti.onrender.com",
+				changeOrigin: true,
+				secure: false, // disables SSL certificate verification (use only if needed)
 			},
 		},
 	},
